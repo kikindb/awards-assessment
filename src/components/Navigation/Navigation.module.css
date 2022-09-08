@@ -1,0 +1,9 @@
+.NavContainer {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.NavContainer h1 {
+  margin: 0;
+  font-size: 3rem;
+}

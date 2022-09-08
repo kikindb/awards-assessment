@@ -1,0 +1,19 @@
+.SelectUserContainer {
+  max-width: 100%;
+  margin: 1rem auto 2rem auto;
+  text-align: left;
+}
+
+.formContainer label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.formContainer select {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+}

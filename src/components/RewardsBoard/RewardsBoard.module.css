@@ -1,0 +1,29 @@
+.RewardsContainer {
+  background-color: white;
+  background-image: url(./../../../public/img/confeti.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  border-radius: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+.RewardsContainer h2 {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.PointsText {
+  background-color: #0e63b9;
+  border-radius: 0.5rem;
+  max-width: fit-content;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+  color: white;
+  box-shadow: 0px 10px 10px rgb(0, 208, 255, 0.2);
+  font-size: 3rem;
+  min-width: 96px;
+}

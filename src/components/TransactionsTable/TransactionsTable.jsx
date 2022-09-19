@@ -1,4 +1,4 @@
-import { calculatePointsByTransaction } from "../../utils/utils";
+import { calculatePointsByTransaction, transformDate } from "../../utils/utils";
 import styles from "./TransactionsTable.module.css";
 
 export default function TransactionsTable({ transactions }) {
@@ -22,7 +22,7 @@ export default function TransactionsTable({ transactions }) {
               <tr key={item.id}>
                 <td>{idx + 1}</td>
                 <td>${item.amount}</td>
-                <td>{item.date}</td>
+                <td>{transformDate(item.date)}</td>
                 <td>{calculatePointsByTransaction(item.amount)}</td>
               </tr>
             );

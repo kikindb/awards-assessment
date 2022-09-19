@@ -4,7 +4,11 @@ import SelectUser from "../components/SelectUser/SelectUser";
 import TransactionsTable from "../components/TransactionsTable/TransactionsTable";
 import useTransactions, { homeActions } from "../hooks/useTransactions";
 
-import { calculateRewards, getAllUsersFromTransactions } from "../utils/utils";
+import {
+  calculateRewards,
+  getAllUsersFromTransactions,
+  sortTransactionsByDate,
+} from "../utils/utils";
 
 export default function Home() {
   const [homeState, dispatchHome] = useTransactions();
@@ -23,7 +27,12 @@ export default function Home() {
         onSelectUser={handleSelect}
       />
       <RewardsBoard points={calculateRewards(homeState.userTransactions)} />
-      <TransactionsTable transactions={homeState.userTransactions} />
+      <TransactionsTable
+        transactions={sortTransactionsByDate(
+          homeState.userTransactions,
+          "DESC"
+        )}
+      />
     </Layout>
   );
 }

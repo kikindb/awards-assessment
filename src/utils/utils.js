@@ -36,3 +36,23 @@ export function calculateRewards(transactions) {
     }, 0);
   return rewards;
 }
+
+export function transformDate(date) {
+  return new Intl.DateTimeFormat("en-US").format(new Date(date));
+}
+
+export function sortTransactionsByDate(transactions, sortType = "DESC") {
+  if (!transactions) return [];
+  const transactionsSorted = [...transactions];
+  if (sortType === "DESC") {
+    transactionsSorted.sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+  } else {
+    transactionsSorted.sort(
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+    );
+  }
+
+  return transactionsSorted;
+}
